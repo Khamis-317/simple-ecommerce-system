@@ -18,6 +18,7 @@ public class ShippingService {
         }
         System.out.println("Total package weight: " + totalWeight + " kg");
         System.out.println("Shipping to: " + address);
+        System.out.println();
     }
 
 }

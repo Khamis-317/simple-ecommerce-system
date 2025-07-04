@@ -67,11 +67,11 @@ public class Product {
     }
 
     public Boolean isShippable() {
-        return shippable != null;
+        return shippable != Shippable.NO_SHIPPING;
     }
 
     public boolean isExpirable() {
-        return expirable != null;
+        return expirable != Expirable.NO_EXPIRY;
     }
 
 

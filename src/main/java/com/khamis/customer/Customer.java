@@ -9,6 +9,7 @@ public class Customer {
     private String name;
     private double balance;
     private ShoppingCart shoppingCart;
+    private String address;
 
     public Customer(String name, double balance) {
         if (balance < 0) throw new IllegalArgumentException("Balance must be >= 0");
@@ -28,7 +29,7 @@ public class Customer {
             throw new OutOfStockException(product.getProductName(), product.getProductQuantity(), quantity);
         }
 
-        if (product.isExpirable()){
+        if (product.getExpirable().isExpired()){
             throw new ExpiredProductException(product.getProductName(), product.getExpirable().getExpiryDate());
         }
         shoppingCart.addItem(new Item(product, quantity));
@@ -57,5 +58,12 @@ public class Customer {
 
     public void setShoppingCart(ShoppingCart shoppingCart) {
         this.shoppingCart = shoppingCart;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

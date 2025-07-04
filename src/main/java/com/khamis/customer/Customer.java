@@ -11,10 +11,11 @@ public class Customer {
     private ShoppingCart shoppingCart;
     private String address;
 
-    public Customer(String name, double balance) {
+    public Customer(String name, double balance, String address) {
         if (balance < 0) throw new IllegalArgumentException("Balance must be >= 0");
         this.name = name;
         this.balance = balance;
+        this.address = address;
         this.shoppingCart = new ShoppingCart();
     }
 

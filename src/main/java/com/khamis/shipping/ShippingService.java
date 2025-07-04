@@ -3,7 +3,7 @@ package com.khamis.shipping;
 import java.util.List;
 
 public class ShippingService {
-    public void shipItems(List<ShippingItem> items, String address){
+    public static void shipItems(List<ShippingItem> items, String address){
         if (items.isEmpty()) {
             System.out.println("No items to be shipped.");
             return;
@@ -19,4 +19,5 @@ public class ShippingService {
         System.out.println("Total package weight: " + totalWeight + " kg");
         System.out.println("Shipping to: " + address);
     }
+
 }

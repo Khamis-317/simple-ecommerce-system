@@ -20,7 +20,6 @@ public class Customer {
 
 
     public void removeBalance(double amount){
-        if (amount > balance) throw new InsufficientBalanceException("Insufficient balance.");
         balance -= amount;
     }
 
